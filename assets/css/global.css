@@ -2007,22 +2007,18 @@ section {
 
 .gallery {
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 .gallery > a,
 .gallery > span {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 .gallery > a > figcaption,
 .gallery > span > figcaption {
-  flex: 0 0 auto;
-  text-align: center;
   width: 100%;
+  text-align: center;
 }
 .gallery img {
   display: block;
@@ -2033,26 +2029,33 @@ section {
 }
 .gallery.half > a,
 .gallery.half > span {
-  width: calc(50% - 0.5em);
+  flex: 0 0 calc(50% - 10px);
 }
 .gallery.third > a,
 .gallery.third > span {
-  width: calc(33.3333% - 0.5em);
+  flex: 0 0 calc(33.3333% - 13.3333px);
 }
 .gallery.fourth > a,
 .gallery.fourth > span {
-  width: calc(25% - 0.4em);
+  flex: 0 0 calc(25% - 15px);
 }
 
-@media only screen and (max-width: 992px) {
-  .gallery {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@media only screen and (max-width: 600px) {
+  .gallery.half > a,
+  .gallery.half > span {
+    flex: 0 0 100%;
   }
-  .gallery > a,
-  .gallery > span {
-    width: calc(100% - 0.5em);
+  .gallery.third > a,
+  .gallery.third > span {
+    flex: 0 0 calc(50% - 10px);
+  }
+  .gallery.third > a:last-child,
+  .gallery.third > span:last-child {
+    flex: 0 0 100%;
+  }
+  .gallery.fourth > a,
+  .gallery.fourth > span {
+    flex: 0 0 calc(50% - 10px);
   }
 }
 /* Footer  ---------------------------  */
