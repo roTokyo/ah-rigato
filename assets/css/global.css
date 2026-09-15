@@ -783,6 +783,10 @@ table {
   color: #FF0025;
 }
 
+.u-nbb {
+  border-bottom: none　 !important;
+}
+
 .u-tal {
   text-align: left;
 }
@@ -924,7 +928,7 @@ table {
 /* Grids */
 /* Objects ----------------------------  */
 .o-about {
-  margin: 0 0 40px;
+  margin: 0;
 }
 .o-about .cover-author-image {
   width: 100px;
@@ -1505,6 +1509,24 @@ section {
   margin: 2rem 0;
 }
 
+.sectionContattami.redBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 62rem) {
+  .sectionContattami.redBtn {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .sectionContattami.redBtn a {
+    white-space: nowrap;
+  }
+}
 .sectionContact {
   height: 90vh;
   min-height: 500px;
