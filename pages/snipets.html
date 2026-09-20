@@ -241,14 +241,84 @@ c2 -173 2 -178 -20 -201 -20 -20 -35 -24 -109 -29 -47 -2 -93 0 -102 5 -14 8
 
   <section class="sectionSnipets">
 
+  <h3>per galleria foto</h3>
+
+  <pre><code class="language-&lt;liquid&gt;">gallery:
+  - url:        .jpg
+    image_path: -thumb.jpg
+    alt: "«»"
+    caption: "«»"
+  - url:        .jpg
+    image_path: -thumb.jpg
+    alt: "«»"
+    caption: "«»"
+{% comment %} VERSIONE 03 {% endcomment %}
+&lt;section class="sectionPhotogallery u-mb3" style="width: 98%"&gt;
+  {% include atom/photoGallery.html 
+     class="gallery print" 
+     layout="third" 
+     id="gallery" 
+     caption=""
+     image_style="max-width: 95%;"
+  %}
+&lt;/section&gt;
+</code></pre>
+
+  <h3>per foto singole</h3>
+
+  <pre><code class="language-&lt;liquid&gt;">  {% lightbox_photo "nomecartella", "nomefoto.jpg", "guarda questa foto" %}  
+  {% lightbox_photo "", "https://esempio.com/foto.jpg", "guarda questa foto" %}  
+  ---
+  {% comment %} solo lazyload per immagini piccole {% endcomment %}
+  &lt;div class="u-tac"&gt;
+      &lt;style&gt;
+      @media print {
+        .print {
+          width: 100%;   /* riduci qui quanto vuoi */
+          height: auto;
+          margin: 0 auto;
+        }
+      }
+    &lt;/style&gt;
+    {% include atom/singleImageSmall.html 
+      image=""
+      caption=""
+      figure_class=""
+      img_width="100%"
+      img_class=""
+      caption_class=""
+    %}
+  &lt;/div&gt;
+  ---
+  {% comment %} Lazyload con blur x immagini grandi {% endcomment %}
+  &lt;div class="u-tac"&gt;
+      &lt;style&gt;
+      @media print {
+        .print {
+          width: 100%;   /* riduci qui quanto vuoi */
+          height: auto;
+          margin: 0 auto;
+        }
+      }
+    &lt;/style&gt;
+    {% include atom/singleImageBig.html 
+      image=""
+      img_ext=".jpg"
+      caption=""
+      figure_class="u-mb3"
+      img_class=""
+      img_width = "100%"
+      caption_class=""
+    %}
+  &lt;/div&gt;
+</code></pre>
+
   <h3>per usare i plug-in </h3>
 
   <pre><code class="language-&lt;liquid&gt;">  {% simbolo %}                                            -&gt; output di default (✪, come richiesto)  
   {% simbolo "★" %}                                        -&gt; cambia solo il simbolo  
   {% simbolo simbolo="★" size="24px" color="red" %}        -&gt; cambia solo alcune parti, il resto resta di default  
   {% simbolo nbsp="1" bottom="0" %}                        -&gt; anche gli spazi e la posizione sono modificabili  
-  {% lightbox_photo "nomecartella", "nomefoto.jpg", "guarda questa foto" %}  
-  {% lightbox_photo "", "https://esempio.com/foto.jpg", "guarda questa foto" %}  
 </code></pre>
 
   <h3>per usare le slug</h3>
@@ -262,7 +332,7 @@ c2 -173 2 -178 -20 -201 -20 -20 -35 -24 -109 -29 -47 -2 -93 0 -102 5 -14 8
   {% luogo "slug-che-non-esiste" %} produce #
 </code></pre>
 
-  <h3>per i blocchi immagine + testo</h3>
+  <h3>per foto + testo</h3>
   <p>invertire i blocchi se si vuole img a sx e testo a dx<br>
       ◾️ oltre alla classe <strong>textWide</strong> c’è <strong>equal</strong> e <strong>imageWide</strong></p>
   <pre><code class="language-&lt;html&gt;">  cssinline:     ["text+img_flex"]
@@ -279,7 +349,7 @@ c2 -173 2 -178 -20 -201 -20 -20 -35 -24 -109 -29 -47 -2 -93 0 -102 5 -14 8
   &lt;/div&gt;
 </code></pre>
 
-  <h3>per i Video</h3>
+  <h3>per i video</h3>
   <pre><code class="language-&lt;html&gt;">  &lt;style&gt;
   .video-container {
       max-width: 800px;

@@ -1,6 +1,6 @@
 
   (function () {
-    const links = document.querySelectorAll('a[data-lity]');
+    const links = Array.from(document.querySelectorAll('a[data-lity]')).filter(a => !a.querySelector('img'));
     // Niente anteprima su dispositivi senza hover (touch)
     if (!links.length || !window.matchMedia('(hover: hover)').matches) return;
 
