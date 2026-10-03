@@ -14,24 +14,24 @@
 
 
 
-<title>Snipets by Enjoy Japan!</title>
-<meta name="description" content="My short-cuts to this site">
+<title>Katsura Rikyū (桂離宮) by Enjoy Japan!</title>
+<meta name="description" content="Alcune note sul giardino della villa di Katsura Rikyū">
 <meta name="keywords" content="Enjoy Japan, viaggi personalizzati Giappone, itinerari insoliti, turismo su misura, tradizioni giapponesi, cultura Giappone, esperienze uniche Giappone">
 <meta name="author" content="Enjoy Japan! by KazuRo team">
 
 <link rel="canonical" href="https://rotokyo.github.io/ah-rigato/" />
-<link rel="sitemap"    href="https://rotokyo.github.io/ah-rigato/pages/snipets.html"  type="application/xml" title="Sitemap">
-<link rel="author"     href="https://rotokyo.github.io/ah-rigato/pages/snipets.html" type="text/plain">
+<link rel="sitemap"    href="https://rotokyo.github.io/ah-rigato/luoghi/kyoto/castelli/kyoto_giardini_katsurarikyu"  type="application/xml" title="Sitemap">
+<link rel="author"     href="https://rotokyo.github.io/ah-rigato/luoghi/kyoto/castelli/kyoto_giardini_katsurarikyu" type="text/plain">
 
 <!-- Open Graph / Facebook (Mancavano i tag fondamentali per il testo) -->
-<meta property="og:url" content="https://rotokyo.github.io/ah-rigato/pages/snipets.html" />
+<meta property="og:url" content="https://rotokyo.github.io/ah-rigato/luoghi/kyoto/castelli/kyoto_giardini_katsurarikyu" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Snipets by Enjoy Japan!" />
-<meta property="og:description" content="My short-cuts to this site" />
+<meta property="og:title" content="Katsura Rikyū (桂離宮) by Enjoy Japan!" />
+<meta property="og:description" content="Alcune note sul giardino della villa di Katsura Rikyū" />
 <meta property="og:site_name" content="Enjoy Japan!" />
 
 
-  <meta property="og:image" content="https://rotokyo.github.io/ah-rigato/assets/images/x_whatsapp.jpg">
+  <meta property="og:image" content="https://rotokyo.github.io/ah-rigato/assets/images/posts/heroes/kyoto_katsurarikyu_sch.jpg">
 
 
 <!-- TAG CRITICI DIMENSIONI: Comunicano al bot le dimensioni esatte per l'immagine 1200x800 -->
@@ -41,10 +41,10 @@
 
 <!-- Twitter / X Card Tags (Mancavano per la validazione su X) -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Snipets by Enjoy Japan!" />
-<meta name="twitter:description" content="My short-cuts to this site" />
+<meta name="twitter:title" content="Katsura Rikyū (桂離宮) by Enjoy Japan!" />
+<meta name="twitter:description" content="Alcune note sul giardino della villa di Katsura Rikyū" />
 
-  <meta name="twitter:image" content="https://rotokyo.github.io/ah-rigato/assets/images/x_whatsapp.jpg" />
+  <meta name="twitter:image" content="https://rotokyo.github.io/ah-rigato/assets/images/posts/heroes/kyoto_katsurarikyu_sch.jpg" />
 
 <!-- End SEO Section -->
 
@@ -76,7 +76,53 @@
 	<!-- <link rel="stylesheet" href="https://rotokyo.github.io/ah-rigato/assets/css/global.css"> -->
 
 	<!-- CSS inline -->
-	<!-- Mette i css online -->
+	<!-- Mette i css online --><style type="text/css">@charset "UTF-8";
+.accordion {
+  width: 98%;
+  margin: 0;
+}
+
+.accordion-header {
+  display: flex;
+  padding: 0rem 1rem;
+  margin-bottom: 0;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+.accordion-header::before {
+  content: "▶︎";
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+.accordion-header.active::before {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  display: none;
+  padding: 0 1rem 1rem;
+  background: #fff;
+}
+.accordion-content.open {
+  display: block;
+}
+
+hr {
+  border-top: 1px solid #fafafa;
+  width: 95%;
+  margin: 0.25rem 0;
+}
+
+input {
+  font-family: sans-serif;
+  width: 30px;
+}
+
+label {
+  display: inline;
+  font-size: 1rem;
+}
+</style>
 
 	<link rel="sitemap"    href="/ah-rigato/sitemap.xml" type="application/xml" title="Sitemap">
     <link rel="author"     href="https://rotokyo.github.io/ah-rigato/humans.txt" type="text/plain">
@@ -239,140 +285,470 @@ c2 -173 2 -178 -20 -201 -20 -20 -35 -24 -109 -29 -47 -2 -93 0 -102 5 -14 8
 </section> <!-- End Sidebar -->
 <section class="l-content-box clearfix">
 
-  <section class="sectionSnipets">
+  <article class="l-post-article">
 
-  <h3>per galleria foto</h3>
-
-  <pre><code class="language-&lt;liquid&gt;">gallery:
-  - url:        .jpg
-    image_path: -thumb.jpg
-    alt: "«»"
-    caption: "«»"
-  - url:        .jpg
-    image_path: -thumb.jpg
-    alt: "«»"
-    caption: "«»"
-{% comment %} VERSIONE 03 {% endcomment %}
-&lt;section class="sectionPhotogallery u-mb3" style="width: 98%"&gt;
-  {% include atom/photoGallery.html 
-     class="gallery print" 
-     layout="third" 
-     id="gallery" 
-     caption=""
-     image_style="max-width: 95%;"
-  %}
-&lt;/section&gt;
-</code></pre>
-
-  <h3>per foto singole</h3>
-
-  <pre><code class="language-&lt;liquid&gt;">  {% lightbox_photo "nomecartella", "nomefoto.jpg", "guarda questa foto" %}  
-  {% lightbox_photo "", "https://esempio.com/foto.jpg", "guarda questa foto" %}  
-  ---
-  {% comment %} solo lazyload per immagini piccole {% endcomment %}
-  &lt;div class="u-tac"&gt;
-      &lt;style&gt;
-      @media print {
-        .print {
-          width: 100%;   /* riduci qui quanto vuoi */
-          height: auto;
-          margin: 0 auto;
-        }
-      }
-    &lt;/style&gt;
-    {% include atom/singleImageSmall.html 
-      image=""
-      caption=""
-      figure_class=""
-      img_width="100%"
-      img_class=""
-      caption_class=""
-    %}
-  &lt;/div&gt;
-  ---
-  {% comment %} Lazyload con blur x immagini grandi {% endcomment %}
-  &lt;div class="u-tac"&gt;
-      &lt;style&gt;
-      @media print {
-        .print {
-          width: 100%;   /* riduci qui quanto vuoi */
-          height: auto;
-          margin: 0 auto;
-        }
-      }
-    &lt;/style&gt;
-    {% include atom/singleImageBig.html 
-      image=""
-      img_ext=".jpg"
-      caption=""
-      figure_class="u-mb3"
-      img_class=""
-      img_width = "100%"
-      caption_class=""
-    %}
-  &lt;/div&gt;
-</code></pre>
-
-  <h3>per usare i plug-in </h3>
-
-  <pre><code class="language-&lt;liquid&gt;">  {% simbolo %}                                            -&gt; output di default (✪, come richiesto)  
-  {% simbolo "★" %}                                        -&gt; cambia solo il simbolo  
-  {% simbolo simbolo="★" size="24px" color="red" %}        -&gt; cambia solo alcune parti, il resto resta di default  
-  {% simbolo nbsp="1" bottom="0" %}                        -&gt; anche gli spazi e la posizione sono modificabili  
-</code></pre>
-
-  <h3>per usare le slug</h3>
-  <p>Per altre opzioni vedi il file 20XX-snipets.md</p>
-
-  <pre><code class="language-&lt;liquid&gt;">  {% post "post_nara" %}
-  {% post "post_nara" "Nara" %}
-  {% post "slug-che-non-esiste" %} produce #
-  {% luogo "sch_kyoto_tenryu-ji" %}
-  {% luogo "sch_kyoto_sanjusangen-do" "Sanjūsangen-dō" %}
-  {% luogo "slug-che-non-esiste" %} produce #
-</code></pre>
-
-  <h3>per foto + testo</h3>
-  <p>invertire i blocchi se si vuole img a sx e testo a dx<br>
-      ◾️ oltre alla classe <strong>textWide</strong> c’è <strong>equal</strong> e <strong>imageWide</strong></p>
-  <pre><code class="language-&lt;html&gt;">  cssinline:     ["text+img_flex"]
+  <!-- Immagine HERO --> 
   
-  &lt;div class="boxTextImage doNotPageBreakInside textWide"&gt;
-  &lt;div class="boxImage"&gt;
-      &lt;img src="/ah-rigato/assets/images/posts/galleries" 
-          alt=""
-          loading="lazy"&gt;
-  &lt;/div&gt;
-  &lt;div class="boxTextWrapper"&gt;
-      &lt;p&gt;&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;/div&gt;
-</code></pre>
+<!-- qui lasci invariato il tuo codice per immagini locali -->
+  
+  
+  
 
-  <h3>per i video</h3>
-  <pre><code class="language-&lt;html&gt;">  &lt;style&gt;
-  .video-container {
-      max-width: 800px;
-      margin: 2rem auto;
-      text-align: center;
-  }
-  .video-caption {
-      margin-top: 0.5rem;
-      font-style: italic;
-      color: #666;
-  }
-  &lt;/style&gt;
-  &lt;div class="video-container"&gt;
-      &lt;video controls width="80%"&gt;
-          &lt;source src="" type="video/mp4"&gt;
-          Il tuo browser non supporta il tag video.
-      &lt;/video&gt;
-      &lt;p class="video-caption"&gt;«»&lt;/p&gt;
-  &lt;/div&gt;
-</code></pre>
+  <figure>
+    <div class="o-post-cover-image u-tac">
+      <a href="/ah-rigato/assets/images/posts/heroes/kyoto_katsurarikyu_sch.jpg" class="progressive replace">
+        <img src="/ah-rigato/assets/images/posts/heroes/kyoto_katsurarikyu_sch-blur.jpg" class="preview" alt="" title="">
+      </a>
+      <figcaption class="u-tal"></figcaption>
+    </div>
+  </figure> 
 
+
+
+
+
+
+  <!-- Tags -->
+  <section class="c-post-tag_wrapper clearfix">
+    
+    
+        <a href="/ah-rigato/postTags/giardino" class="c-post-tag">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" class="icon tag">
+  <use xlink:href="#tag"></use>
+  <path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path></svg> giardino
+        </a> 
+    
+        <a href="/ah-rigato/postTags/kyoto" class="c-post-tag">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" class="icon tag">
+  <use xlink:href="#tag"></use>
+  <path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path></svg> kyoto
+        </a> 
+    
 </section>
 
+  <!-- End tags section -->
+
+  <!-- Wrapper post -->
+  <div class="o-post-wrapper">
+    <!-- Titolo post -->
+    <header class="post-header">
+      <h1 class="scheda-title u-mb1">🏡  Katsura Rikyū (桂離宮)</h1>
+      
+        <div class="post-date"><span>    </span></div>
+      
+    </header> <!-- End post header section -->
+
+    <!-- Contenuto post-->
+    <section class="post-content-wrapper u-mt1">
+      <p class="itinerario u-mb1 clearfix">Kyoto<br>
+Alcune note sul giardino della villa di <b>Katsura Rikyū</b></p>
+
+<p><strong>Sito Web</strong> <a href="https://kyoto-gosho.kunaicho.go.jp/katsura-rikyu" target="_blank" rel="noopener noreferrer nofollow" class="extLink">Katsura Rikyū (桂離宮)</a></p>
+
+<p><strong>特別名勝</strong> <em>Special Place of Scenic Beauty</em><br>
+<br></p>
+<p class="nota">ℹ️ <strong>solo su prenotazione</strong> e la visita segue rigide regole alle quali non sono ammesse eccezioni!. </p>
+<p><br></p>
+<table class="u-tac u-mb1 u-mt2">
+<tr>
+<td title="Da visitare">👍👍👍👍👍</td>
+<td title="In caso di pioggia">☔️ 👍</td>
+<td title="Tempo necessario per la visita">⌚️ <b>±1:00h</b>
+</td>
+<td title="Verde e muschio primaverile">🍃🍃🍃</td>
+<td title="Foliage e light-up notturno">🍁🍁🍁</td>
+<td title="Affollamento">🗣</td>
+</tr>
+</table>
+
+<!-- Spigolature e note a margine -->
+<div class="accordion">
+  <div class="accordion-item">
+    <h4 class="accordion-header"><b>Spigolature e note a margine</b></h4>
+    <div class="accordion-content">
+      <p>
+        Il <strong>Principe Toshihito</strong> (智仁親王, 1579–1629) è la vera mente geniale dietro la nascita della Villa Imperiale di Katsura.<br>
+        Fratello minore dell’<em>Imperatore Go-Yōzei</em> e adottato per un breve periodo dal potente unificatore del Giappone, <strong>Toyotomi Hideyoshi</strong>, Toshihito fu una delle figure culturali più colte, raffinate e poliedriche della sua epoca ed è fondamentale capire chi era perché la villa non nacque come un semplice sfoggio di ricchezza, ma come il rifugio intellettuale di un uomo straordinario.</p>
+      <p>
+        Un Principe <strong>Esiliato</strong> dalla Politica<br>
+        Quando Hideyoshi ebbe un figlio biologico, l’adozione di Toshihito fu sciolta per ovvi motivi dinastici. Come compensazione, gli fu consentito di fondare una nuova linea della famiglia imperiale, <em>Hachijō-no-miya</em>. Privo di un ruolo politico paragonabile a quello delle grandi figure che stavano trasformando il Giappone, Toshihito rivolse gran parte delle proprie energie alle arti, alla letteratura e all’estetica.</p>
+      <p>
+        Massimo Esperto del <strong>Romanzo di Genji</strong><sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Toshihito non era un semplice appassionato, era uno dei più raffinati conoscitori della letteratura classica del suo tempo. Ricevette i segreti della trasmissione poetica (<em>Kokin Denju</em>) direttamente dal leggendario poeta <strong>Hosokawa Yūsai</strong> e quando nel 1615 iniziò a costruire la villa su un terreno ereditato lungo il fiume, il suo obiettivo era letteralmente portare in vita il Romanzo di Genji e scelse Katsura perché nel romanzo quel luogo era descritto come lo scenario della splendida villa di campagna del personaggio di <strong>Fujiwara no Michinaga</strong>.</p>
+      <p>
+        La <strong>Malinconia della Luna</strong> e il <strong>Significato di Katsura</strong><br>
+        Il nome «Katsura» è legato a una leggenda cinese secondo cui sulla Luna cresce un gigantesco albero di alloro (chiamato appunto Katsura in giapponese) e il principe scelse questa villa luogo il fiume Katsura principalmente perché era già celebre fin dall’epoca Heian come luogo privilegiato per contemplare la luna d’autunno.<br>
+        Con il giardino ricreò un mondo ideale in cui la bellezza, la poesia e la contemplazione della luna sostituivano le miserie della politica terrena.</p>
+      <p>
+        <strong>La Morte e l’Eredità</strong><br>
+        Morì nel 1629, lasciando però un complesso ancora lontano dalla forma che conosciamo oggi ma con le linee guida fondamentali già tracciate e fu il figlio, il <strong>Principe Toshitada</strong>, che ne prese in mano le redini anni dopo, ampliandola e trasformandola progressivamente nel complesso che conosciamo oggi.  </p>
+    </div>
+  </div>
+</div>
+
+<h4 class="u-mb-10px" id="giardini">Giardini</h4>
+<p><strong>Chisentei-en (池泉庭園)</strong> <em>giardino con laghetto</em>:<br>
+<strong>Chisen Kaiyū-shiki Teien</strong> <em>Giardino da passeggiata con laghetto a percorso circolare</em><sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
+
+<h4 class="u-mb-10px" id="mappa-del-percorso">mappa del percorso</h4>
+<div class="u-tac">
+  
+
+
+
+<figure class="print u-mb3">
+  <a href="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu_mappa.jpg" style="max-width: 100%;" class="u-tac progressive replace">
+      <img src="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu_mappa-blur.jpg" class="preview " alt="" title="">
+  </a>
+  <figcaption class="u-tac "></figcaption>
+</figure>
+
+</div>
+
+<h4 id="descrizione-delle-scene">descrizione delle scene<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>
+</h4>
+
+<p><strong>   <span style="font-size: 12px; color: black; position: relative; bottom: 0;">scena ①</span></strong> come ho anticipato altrove il cancello d’ingresso chūmon (中門), il viottolo realizzato con il metodo arare-koboshi (霰こぼし), la siepe ed il pino paravento sumiyoshi (住吉松), ed il ponte dobashi (土橋) rappresentano la prima scena di quest’opera teatrale.</p>
+
+<p><strong>   <span style="font-size: 12px; color: black; position: relative; bottom: 0;">scena ②</span></strong> non mi dilungherò a lungo nel raccontare del cancello miyuki-mon (御幸門)<sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> e del giardino che si estende alla vista aldilà di esso e del cancello principale (表門), basti sapere che fu un ampliamento per ricevere la visita privata dell’imperatore abdicatario <em>Go Mizuno</em> (後水尾上皇).</p>
+
+<p><strong>   <span style="font-size: 12px; color: black; position: relative; bottom: 0;">scena ③</span></strong> proseguiamo nel percorso ed incontriamo la montagna del «foliage» (紅葉山) il cui nome è di per sé evocativo, fino a raggiungere una piccola struttura (外腰掛) in canna, malta e paglia, adibita alla sosta prima di accedere alla sala da tè. Da qui gli ospiti potevano ammirare la collina col boschetto di cicas<sup id="fnref:5"><a href="#fn:5" class="footnote" rel="footnote" role="doc-noteref">5</a></sup>. Da ultimo notiamo la pavimentazione del sentiero col metodo gyō-no-nobedan (行の延段)<sup id="fnref:6"><a href="#fn:6" class="footnote" rel="footnote" role="doc-noteref">6</a></sup></p>
+
+<p><strong>   <span style="font-size: 16px; color: black; position: relative; bottom: 0;">④</span></strong> si giunge infine ad uno dei paesaggi più belli del giardino, al termine della suhama (州浜) è collocata una graziosa lanterna misaki tōrō　(岬灯篭). Più oltre si susseguono il ponte arcuato in pietra tagliata «hotaru-bashi» (蛍橋), l’isola centrale e il «Tsukimi-bashi» (月見橋) e l’insieme è concepito come una rappresentazione del promontorio di «<strong>Amanohashidate</strong>»<sup id="fnref:7"><a href="#fn:7" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> e vicino alla riva la oribe tōrō (織部灯篭), quest’ultima è chiamata anche <a href="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu06.jpg" data-lity="" data-lity-blur="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu06-blur.jpg">kurishitan tōrō</a> o lanterna dei cristiani ed è caratterizzata dalla figura di Cristo scolpita nel fusto<sup id="fnref:8"><a href="#fn:8" class="footnote" rel="footnote" role="doc-noteref">8</a></sup>.　</p>
+
+<section class="sectionPhotogallery u-mb2" style="width: 98%">
+  
+
+
+
+
+
+
+<figure class="gallery print half">
+  
+    
+    
+    
+    
+      <a href="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu04.jpg" data-lity-desc="">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-echo="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu04-thumb.jpg" alt="" title="" loading="lazy" style="max-width: 95%;"> 
+          <figcaption></figcaption>
+      </a>
+    
+  
+    
+    
+    
+    
+      <a href="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu05.jpg" data-lity-desc="">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-echo="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu05-thumb.jpg" alt="" title="" loading="lazy" style="max-width: 95%;"> 
+          <figcaption></figcaption>
+      </a>
+    
+  
+  
+</figure>
+</section>
+
+<p><strong>   <span style="font-size: 16px; color: black; position: relative; bottom: 0;">⑤</span></strong> la vista dal lato opposto rispetto alla Oribe tōrō è poco documentata, ma la possente composizione delle pietre di consolidamento della riva crea un paesaggio che ricorda una gola montana e questo scorcio, da solo, potrebbe costituire un giardino a sé stante. 　
+Poco distante, attraversato un ponte in pietra, si arriva allo Shōkintei (賞金亭), considerato il più prestigioso dei padiglioni da tè di tutto il giardino.<br>
+La vista è magnifica!</p>
+
+<section class="sectionPhotogallery u-mb2" style="width: 98%">
+  
+
+
+
+
+
+
+<figure class="gallery print third">
+  
+    
+    
+    
+    
+      <a href="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu07.jpg" data-lity-desc="">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-echo="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu07-thumb.jpg" alt="" title="" loading="lazy" style="max-width: 95%;"> 
+          <figcaption></figcaption>
+      </a>
+    
+  
+    
+    
+    
+    
+      <a href="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu08.jpg" data-lity-desc="">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-echo="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu08-thumb.jpg" alt="" title="" loading="lazy" style="max-width: 95%;"> 
+          <figcaption></figcaption>
+      </a>
+    
+  
+    
+    
+    
+    
+      <a href="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu09.jpg" data-lity-desc="">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-echo="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu09-thumb.jpg" alt="" title="" loading="lazy" style="max-width: 95%;"> 
+          <figcaption></figcaption>
+      </a>
+    
+  
+  
+</figure>
+</section>
+
+<p><strong>   <span style="font-size: 16px; color: black; position: relative; bottom: 0;">⑥</span></strong> scendendo la scalinata dallo Shōkatei (賞花亭), il punto più elevato di Katsura Rikyū, si raggiunge un punto panoramico dal quale è possibile spaziare con lo sguardo a 180 gradi. La nostra guida disse scherzosamente:<br>
+«Qui concediamo cinque secondi a persona per scattare le foto!».</p>
+
+<p>La fotografia mostra la vista dell’isola centrale chiamata <strong>Shinsen-jima</strong> (神仙島). Secondo la tradizione cinese, è l’isola abitata dagli immortali, gli eremiti dotati del potere di sfuggire alla morte.</p>
+
+<div class="u-tac">
+  
+
+
+
+<figure class="print u-mb3">
+  <a href="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu10.jpg" style="max-width: 100%;" class="u-tac progressive replace">
+      <img src="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu10-blur.jpg" class="preview " alt="" title="">
+  </a>
+  <figcaption class="u-tac "></figcaption>
+</figure>
+
+</div>
+
+<p>Come ho scritto sopra, questa non vuole essere una guida esaustiva ma un piccolo breviario per apprezzare la bellezza e la complessità di del più bel giardino giapponese affinché possa esservi utile anche nella visita di altri giardini.</p>
+
+<p>Come nota finale vi invito a cercare altre tipologie di sentieri come il <strong>shin-no-tobiishi</strong> (真の飛石) oppure dove sono state posate altre lanterne famose:<br>
+◾️ la <strong>sankō no tōrō</strong><sup id="fnref:9"><a href="#fn:9" class="footnote" rel="footnote" role="doc-noteref">9</a></sup> ovvero la <em>lanterna dei tre splendori</em>, una piccola lanterna, lontana alla vista, che richiama (non tanto) simbolicamente il sole, la luna e le stelle<br>
+◾️ la <strong>sankaku tōrō</strong>, una lanterna triangolare che per quanto ne sò è unica<br>
+◾️ la <strong>tsukimi tōrō</strong> o <em>lanterna da contemplazione della neve</em> caratterizzata dal cappello largo e basso, di forma esagonale e sostenuta da quattro corte gambe.</p>
+
+<section class="sectionPhotogallery u-mb3" style="width: 98%">
+  
+
+
+
+
+
+
+<figure class="gallery print third">
+  
+    
+    
+    
+    
+      <a href="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu16.jpg" data-lity-desc="">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-echo="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu16-thumb.jpg" alt="" title="" loading="lazy" style="max-width: 95%;"> 
+          <figcaption></figcaption>
+      </a>
+    
+  
+    
+    
+    
+    
+      <a href="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu17.jpg" data-lity-desc="">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-echo="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu17-thumb.jpg" alt="" title="" loading="lazy" style="max-width: 95%;"> 
+          <figcaption></figcaption>
+      </a>
+    
+  
+    
+    
+    
+    
+      <a href="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu18.jpg" data-lity-desc="">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-echo="/ah-rigato/assets/images/posts/galleries/kyoto_katsurarikyu/katsurarikyu18-thumb.jpg" alt="" title="" loading="lazy" style="max-width: 95%;"> 
+          <figcaption></figcaption>
+      </a>
+    
+  
+  
+</figure>
+</section>
+
+<div class="o-btnLink-bg doNotPageBreakInside">
+  <a href="/ah-rigato/2026/03/05/post_giardini_ch4.html" class="btnLinkBox-bg">
+    <div class="btnLinkContentWrapper-bg">
+      <div class="btnLinkHeader-bg">
+        <img src="/ah-rigato/assets/images/torii.svg" class="btnLinkIcon-bg" alt="Enjoy Japan! icon">
+        <span class="btnLinkTitle-bg">Enjoy Japan!</span>
+      </div>
+      <div class="btnLinkTag-bg">Katsura Rikyū (桂離宮)</div>
+      <div class="btnLinkDescription-bg">Non è uno dei tanti, è un privilegio!</div>
+    </div>
+    <div class="btnLinkImageWrapper-bg" style="background-image: url('/ah-rigato/assets/images/posts/heroes/giardini_ch4-thumb.jpg')" aria-label="Non è uno dei tanti, è un privilegio!">
+    </div>
+  </a>
+</div>
+
+<script>
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+    header.classList.toggle('active');
+    const content = header.nextElementSibling;
+    content.classList.toggle('open');
+  });
+});
+</script>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>il romanzo <strong>Genji Monogatari</strong> è al centro della cultura classica giapponese.<br>Il protagonista è <strong>Hikaru Genji</strong> la cui figura si basa sulle vicende e le caratteristiche di diverse persone reali vissute nella corte imperiale del periodo Heian. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">⤴</a></p>
+    </li>
+    <li id="fn:2">
+      <p>un bel po’ lungo da ricordare ora, ma una volta visitato, non si dimentica più! <a href="#fnref:2" class="reversefootnote" role="doc-backlink">⤴</a></p>
+    </li>
+    <li id="fn:3">
+      <p>descrizione <strong>non esaustiva</strong> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">⤴</a></p>
+    </li>
+    <li id="fn:4">
+      <p>il cancello costruito per l’imperatore abdicatario andò perduto e l’attuale porta fu ricostruita nel XVIII secolo <a href="#fnref:4" class="reversefootnote" role="doc-backlink">⤴</a></p>
+    </li>
+    <li id="fn:5">
+      <p><strong>cycas revoluta</strong>: pare sia il temine botanico, pianta arcaica originaria del Giappone <a href="#fnref:5" class="reversefootnote" role="doc-backlink">⤴</a></p>
+    </li>
+    <li id="fn:6">
+      <p>in questo giardino sono presenti tre celebri esempi di <strong>nobedan</strong>:<br>1. il <em>shin</em> nobedan (真の延段) presso il <em>koshō-in (古書院)</em>,<br>2. il <em>gyō</em> nobedan (行の延段) davanti all’<em>soto-koshikake 外腰掛</em>,<br>3. ed il <em>kusa</em> nobedan (草の延段) presso il <em>shoiken (笑意軒)</em> <a href="#fnref:6" class="reversefootnote" role="doc-backlink">⤴</a></p>
+    </li>
+    <li id="fn:7">
+      <p>per chi non lo sapesse il promontorio di <strong>Amanohashidate</strong> è una delle <em>Tre Grandi Vedute del Giappone (Nihon Sankei)</em>, celebre per il suo banco di sabbia lungo circa 3,6 km coperto da 8.000 pini che, visto dalle montagne, sembra un ponte verso il cielo <a href="#fnref:7" class="reversefootnote" role="doc-backlink">⤴</a></p>
+    </li>
+    <li id="fn:8">
+      <p>Dopo i divieti imposti al cristianesimo all’inizio del periodo Edo, lanterne di questo tipo sarebbero state utilizzate come oggetti di culto dai <em>kakure kirishitan</em>, i cristiani clandestini che continuarono a praticare la propria fede in segreto <a href="#fnref:8" class="reversefootnote" role="doc-backlink">⤴</a></p>
+    </li>
+    <li id="fn:9">
+      <p>utilizzata per illuminare l’approdo delle imbarcazioni. Questo ci permette di affermare che un tempo il giardino era concepito come un giardino con stagno navigabile (chisen-shūyū), nel quale si visitava il paesaggio a bordo di piccole imbarcazioni <a href="#fnref:9" class="reversefootnote" role="doc-backlink">⤴</a></p>
+    </li>
+  </ol>
+</div>
+
+
+      <!-- Btn Indietro-->
+      <section class="redBtn u-tac u-mt2 u-mb3">
+        <a class="" href="javascript:history.back()"> Indietro </a>
+      </section>
+    </section> <!-- End post content section -->
+
+    <style>
+#share-buttons {display: flex; justify-content: center; align-items:center; margin: 50px auto; vertical-align: middle;}
+#share-buttons:after {content: ""; display: block; clear: both;}
+#share-buttons > a,
+#share-buttons > button {
+    position: relative;
+    text-align: left; 
+    height: 55px; 
+    width: 100px; 
+    float: left; 
+    text-align: center;
+    background-color: white;
+    border: none
+}
+@media only screen and (max-width: 850px) {
+  #share-buttons > a,
+  #share-buttons > button { width: 120px;}
+}
+@media only screen and (max-width: 420px) {
+  #share-buttons > a,
+  #share-buttons > button { width: 80px;}
+}
+
+#share-buttons > button#printButton > svg {height: 50px; fill: #2c569f; margin-top: 10px;}
+#share-buttons > button#printButton:hover > svg {fill: #7d7d7d; cursor: pointer;}
+#share-buttons > button#printButton > svg {height: 50px; margin: 0;}
+
+#share-buttons > a > svg {height: 46px; fill: #2c569f; margin-top: 10px;}
+#share-buttons > a.mail:hover > svg {fill: #7D7D7D;}
+#share-buttons > a.mail > svg {height: 46px; margin-top: 11px;}
+</style>
+
+  <section class="o-separator u-tac u-mt1 doNotPrint">
+    <h3 class="separator-title post-separator">Stampa o invia</h3>
+
+    
+    <div id="share-buttons" class="u-mt2 u-mb2">
+        <button id="printButton" onclick="window.print()" type="button" title="Stampa la pagina">
+          <svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 192V77.25c0-8.49-3.37-16.62-9.37-22.63L393.37 9.37c-6-6-14.14-9.37-22.63-9.37H96C78.33 0 64 14.33 64 32v160c-35.35 0-64 28.65-64 64v112c0 8.84 7.16 16 16 16h48v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h48c8.84 0 16-7.16 16-16V256c0-35.35-28.65-64-64-64zm-64 256H128v-96h256v96zm0-224H128V64h192v48c0 8.84 7.16 16 16 16h48v96zm48 72c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z"></path></svg>
+        </button>
+        <a class="mail" href="mailto:?&amp;body=https://rotokyo.github.io/luoghi/kyoto/castelli/kyoto_giardini_katsurarikyu" title="Invia la pagina per eMail">
+          <svg viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"></path></svg>
+        </a>
+    </div>
+
+  </section> <!-- End post share section -->
+
+    
+  <footer class="post-footer u-tac doNotPrint">
+    <section class="o-separator u-tac">
+      <h3 class="separator-title post-separator">puoi continuare<br>a leggere</h3>
+      <nav class="o-relatedPosts u-mt2">
+        
+          <div class="c-relatedPost">
+            <div class="post">
+              <a href="/ah-rigato/2026/03/31/post_uji.html">
+                
+                  
+                  
+                  <img class="cardImage" src="/ah-rigato/assets/images/posts/heroes/byodoin_rif-thumb.jpg" alt="">
+                
+              </a>
+
+              <div class="c-cardDate">
+                <date class="">'26</date>
+                <date class="">Mar</date>
+              </div>
+
+              <div class="c-cardContent">
+                <h5 class="cardTitle">Uji 宇治</h5>
+                
+                <p class="cardText">Quando sei in dubbio se il paradiso della «Terra Pura Buddista» esiste oppure no, vai al Byōdō-in.</p>
+                <span class="redBtn btnReadMe u-mt1">
+                  <a href="/ah-rigato/2026/03/31/post_uji.html">Leggi</a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        
+          <div class="c-relatedPost">
+            <div class="post">
+              <a href="/ah-rigato/2026/03/19/ninna-ji.html">
+                
+                  
+                  
+                  <img class="cardImage" src="/ah-rigato/assets/images/posts/heroes/ninnaji-thumb.jpg" alt="">
+                
+              </a>
+
+              <div class="c-cardDate">
+                <date class="">'26</date>
+                <date class="">Mar</date>
+              </div>
+
+              <div class="c-cardContent">
+                <h5 class="cardTitle">Ninna-ji 仁和寺</h5>
+                
+                <p class="cardText">Alla scoperta del complesso delle figure divine del buddismo giapponese.</p>
+                <span class="redBtn btnReadMe u-mt1">
+                  <a href="/ah-rigato/2026/03/19/ninna-ji.html">Leggi</a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        
+      </nav>
+    </section> <!-- End further readings section -->
+  </footer>
+
+
+
+  </div>
+
+</article>
+
+ 
 
   
 
